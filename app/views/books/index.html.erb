@@ -1,2 +1,26 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<h1>Books</h1>
+
+<!-- ここから一覧 -->
+
+
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Body</th>
+        <th colspan="3"></th>
+      <tr>
+    </thead>
+    <tbody>
+      <% @books.each do |list| %>
+      <tr>
+        
+          <th><%= list.title %></th>
+          <th><%= list.body %></th>
+        <th><%= link_to "Show", books_path %></th>
+        <th><%= link_to "Edit", books_path %></th>
+        <th><%= link_to "Destroy", books_path %></th>
+      <tr>
+      <% end %>
+    </tbody>
+  </table>
