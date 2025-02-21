@@ -18,7 +18,7 @@
           <th><%= book.body %></th>
         <th><%= link_to "Show", book_path(book.id) %></th>
         <th><%= link_to "Edit", edit_book_path(book.id) %></th>
-        <th><%= link_to "Destroy", books_path %></th>
+        <th><%= link_to "Destroy", book_path(book.id), method: :delete %></th>
       <tr>
       <% end %>
     </tbody>
